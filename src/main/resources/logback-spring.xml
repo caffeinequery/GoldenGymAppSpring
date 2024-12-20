@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- Appender para la consola -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- Patrón mejorado con fecha, nivel, clase, mensaje y "cajita" -->
+            <pattern>
+                <![CDATA[
+                +-------------------------------------------------------------+
+                | %d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{36}
+                | %-30.30msg
+                ]]>
+            </pattern>
+        </encoder>
+    </appender>
+
+    <!-- Configuración del log raíz -->
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>
